@@ -4,11 +4,11 @@ module FormsLab
   class App < Sinatra::Base
 
     get '/' do
-      erb :'root'
+      erb :root
     end
 
     get '/new' do
-      erb :'pirate/new'
+      erb :'pirates/new'
     end
 
     post '/pirates' do
@@ -23,5 +23,4 @@ module FormsLab
     end
 
   end
-
 end
