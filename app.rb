@@ -4,14 +4,14 @@ module FormsLab
   class App < Sinatra::Base
 
     get '/' do
-      erb :"root"
+      erb :'root'
     end
 
     get '/new' do
-      erb :"pirate/new"
+      erb :'pirate/new'
     end
 
-    post "/pirates" do
+    post '/pirates' do
       @pirate = Pirate.new(params[:pirate])
 
       params[:pirate][:ships].each do |details|
@@ -19,7 +19,7 @@ module FormsLab
       end
       @ships = Ship.all
 
-      erb :"pirates/show"
+      erb :'pirates/show'
     end
 
   end
